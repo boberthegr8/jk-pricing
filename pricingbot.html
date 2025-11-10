@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J&K Pricing Helper</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .chat-container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 480px;
+            text-align: center;
+        }
+        h1 {
+            color: #202124;
+            margin-bottom: 8px;
+            font-size: 24px;
+        }
+        p {
+            color: #5f6368;
+            margin-bottom: 32px;
+            font-size: 16px;
+        }
+        /* Styling the input trigger to look nice */
+        #searchWidgetTrigger {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 16px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            outline: none;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+        }
+        #searchWidgetTrigger:hover, #searchWidgetTrigger:focus {
+            box-shadow: 0 2px 8px rgba(32,33,36,0.3);
+            border-color: rgba(223,225,229,0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <h1>J&K Pricing Bot</h1>
+        <p>What price are you looking for today?</p>
+        
+        <input placeholder="Ask a question..." id="searchWidgetTrigger" />
+    </div>
+
+    <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
+    <gen-search-widget
+      configId="6f443651-8205-47d0-be38-156ded55d66a"
+      triggerId="searchWidgetTrigger">
+    </gen-search-widget>
+
+</body>
+</html>
